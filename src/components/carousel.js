@@ -24,11 +24,11 @@ const Carousel = () => {
             spaceBetween: 10,
           },
           "@1.00": {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           "@1.50": {
-            slidesPerView: 4,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
         }}
