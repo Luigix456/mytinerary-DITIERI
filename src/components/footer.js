@@ -4,8 +4,7 @@ import {Link as LinkRouter} from "react-router-dom"
 
 function footer() {
     return(
-        
-        <div className="bg-light">
+        <div className="bg-light cont-footer">
             <div className="container">
                 <footer className="py-5">
                     <div className="row">

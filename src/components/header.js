@@ -6,27 +6,27 @@ function header() {
     return(
         <div className="bg-danger">
             <header className="p-3 mb-3 border-bottom">
-                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
-                    <div class="container-fluid">
+                <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+                    <div className="container-fluid">
                         <img className="logo" src={process.env.PUBLIC_URL + `pngwing.com.png`}></img>
-                        <a class="navbar-brand" href="#">MyTinerary</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <a className="navbar-brand" href="#">MyTinerary</a>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                                <li class="nav-item">
+                        <div className="collapse navbar-collapse" id="navbarCollapse">
+                            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                                <li className="nav-item">
                                 <LinkRouter to="/" className='link'>
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
                                 </LinkRouter>
                                 </li>
                                 <li class="nav-item">
                                     <LinkRouter to="cities" className='link'>
-                                        <a class="nav-link" href="#">Cities</a>
+                                        <a className="nav-link" href="#">Cities</a>
                                     </LinkRouter>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">About</a>
                                 </li>
                             </ul>
                             <div className="dropdown text-end">
