@@ -1,3 +1,7 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
 .carousel-container {
     margin: auto;
     background-color:rgb(243, 243, 243);
@@ -8,4 +12,10 @@
     height: 42rem;
     background-position: center;
     background-size: cover;
+}
+
+@media screen and (max-width: 770px) {
+    form {
+        display: none;
+    }
 }

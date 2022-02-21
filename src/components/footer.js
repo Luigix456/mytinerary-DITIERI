@@ -28,7 +28,7 @@ function footer() {
                                 <div className="d-flex w-100 gap-2">
                                     <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
                                     <input id="newsletter1" type="text" className="form-control" placeholder="Email address"></input>
-                                    <button className="btn btn-primary" type="button">Subscribe</button>
+                                    <button className="btn btn-danger" type="button">Subscribe</button>
                                 </div>
                             </form>
                         </div>
