@@ -1,10 +1,10 @@
 import React from 'react'
-import "./style.css";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Footer from './components/footer'
 import Header from './components/header'
 import Home from './components/home'
 import Cities from './components/cities'
+import "./style.css";
 
 function App() {
   return (

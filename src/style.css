@@ -1,3 +1,7 @@
+* {
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
 #app { height: 100% }
 html,
 body {
@@ -20,6 +24,9 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  background-image: url("/public/assets/backgroundImage.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 ul li a {
   font-size: 1.2rem;
@@ -55,4 +62,31 @@ ul li a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.title-container {
+  background: rgba(255, 255, 255, 0.849);
+  padding: 2rem;
+  border-radius: 2em;
+}
+
+.title-container div button {
+  /* background: rgba(255, 255, 255, 0.459); */
+  border-radius: 2em;
+  animation-name: button-main;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: .1s;
+}
+@keyframes button-main {
+  from {
+    background: rgb(241, 170, 170);
+    color: white;
+  }
+  to {
+    background: rgb(187, 27, 27);
+    color: white;
+    transform: scale(1.1, 1.1);
+  }
 }

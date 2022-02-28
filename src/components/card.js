@@ -4,7 +4,7 @@ function Card() {
     return(
         <div>
             {datos.map(ciudades=>
-            <div className="card" style={{width: 25 + 'rem'}}>
+            <div className="card" style={{width: 50 + 'rem'}}>
             <img src={process.env.PUBLIC_URL + `/assets/${ciudades.image}`} className="card-img-top" alt="barcelona"></img>
             <div className="card-body">
                 <h3>{ciudades.name}</h3>

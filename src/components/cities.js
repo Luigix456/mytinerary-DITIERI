@@ -1,11 +1,12 @@
-import React from 'react'
-
-
-function Cities() {
+import React from "react";
+/* import '../../styles/Cities.css' */
+import Cards from './cards'
+const Cities = ()=>{
     return(
-        <div className="default-cities">
-            <img style={{width: 80 + "%", heigth:"auto"}} src={process.env.PUBLIC_URL + `./pagina-en-construcción2.png`}></img>
-        </div>
+        <>
+        <h1>CARDS</h1>
+        <Cards/>
+        </>
     )
 }
-export default Cities
+export default Cities;
