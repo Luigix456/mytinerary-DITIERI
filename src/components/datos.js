@@ -39,7 +39,7 @@ const ciudades =[
         "id": 6,
         "image":"ciudad-mexico.jpg",
         "name": "City of Mexico",
-        "description": "Disfruta de tus platos favoritos, de los diferentes paises, en un evento unico para toda la familia",
+        "description": "is the capital city of Mexico and one of the most important political, cultural, educational and financial centres in North America. Mexico City is the country's largest city as well as its most important political, cultural, educational and financial center.",
         "continent": "America"
       },
       {
@@ -89,6 +89,31 @@ const ciudades =[
         "description": "Shanghai, also spelled Shang-hai, city and province-level shi (municipality), east-central China. It is one of the world's largest seaports and a major industrial and commercial centre of China",
         "continent": "Asia"
       }
+      ,
+      {
+        "id": 13,
+        "image":"BuenosAires.jpg",
+        "name": "Buenos Aires",
+        "description": "Buenos Aires is a city that never sleeps, famous for its phenomenal nightlife, which ranges from traditional neighbourhood taverns to award-winning cocktail bars, big clubs, hidden gig venues, and underground nightspots catering to every niche.",
+        "continent": "America"
+      }
+      ,
+      {
+        "id": 14,
+        "image":"Rio.jpg",
+        "name": "Rio",
+        "description": "Check out the lovely images of Rio de Janeiro that will convince you to visit the place. This alluring city has always had a dramatic natural beauty you will be amazed",
+        "continent": "America"
+      }
+      ,
+      {
+        "id": 15,
+        "image":"Montevideo.jpg",
+        "name": "Montevideo",
+        "description": "This 22-kilometer ocean-side promenade is a perfect place to take a break from the office, do some fitness, or watch the sky change colors during sunset.",
+        "continent": "America"
+      }
+      
     ]
   
     export default ciudades;

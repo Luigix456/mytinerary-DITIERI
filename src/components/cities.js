@@ -4,7 +4,6 @@ import Cards from './cards'
 const Cities = ()=>{
     return(
         <>
-        <h1>CARDS</h1>
         <Cards/>
         </>
     )

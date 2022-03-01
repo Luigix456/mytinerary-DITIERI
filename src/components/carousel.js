@@ -46,11 +46,10 @@ const Carousel = () => {
       >
         {Datos.map((datos) => (
           <SwiperSlide>
-            <div className="card" style={{width: 25 + 'rem'}}>
+            <div className="card carousel-container" style={{width: 25 + 'rem'}}>
                 <img src={process.env.PUBLIC_URL + `/assets/${datos.image}`} className="card-img-top carousel-img" alt="barcelona"></img>
-                <div className="card-body">
-                    <h3>{datos.name}</h3>
-                    <p className="card-text">{datos.description}</p>
+                <div className="title-img-carousel">
+                  <p>{datos.name}</p>
                 </div>
             </div>
           </SwiperSlide>

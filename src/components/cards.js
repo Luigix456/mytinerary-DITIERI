@@ -7,9 +7,9 @@ function Cards() {
 
   let dataSearch = ciudades.filter(city => city.name.substring(0,filter.length).toLowerCase() === filter.toLowerCase().trim())
   return (
-    <div className='container d-flex justify-content-center h-100'>
-      <div className='col'>
-        </div>
+    <div className='cities'>
+      <input className="inp-search" type="text" placeholder="Search..." value={filter} onChange={(event)=>setFilter(event.target.value)}/>
+      <div className='container d-flex justify-content-center h-100'>
         <div className='row cards'>
            {
              dataSearch.map(card=> (
@@ -18,9 +18,10 @@ function Cards() {
                 </>
            ))
           }
-          <input type="text" placeholder="Search..." value={filter} onChange={(event)=>setFilter(event.target.value)}/>
         </div>
     </div>
+    </div>
+    
   )
 }
 
