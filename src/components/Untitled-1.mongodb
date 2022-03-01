@@ -12,7 +12,7 @@ const okContinent = _continent
 //LLAMAR BASE DE DATOS
 use(database);
 
-db.ciudades.findAndModify({query: {name:okName},
+db.cities.findAndModify({query: {name:okName},
 update:{$set:{name:okName,
               pais:okContinent,
               }},

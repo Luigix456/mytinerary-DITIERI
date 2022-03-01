@@ -5,22 +5,14 @@ import Header from './components/header'
 import Home from './components/home'
 import Cities from './components/cities'
 import "./style.css";
-
-useEffect(() => {
-  axios.get(``)
-  .then(response =>setApiData(response))
-
-  axios.get(`http:/localhost:4000/api/allcities`)
-  .then(response =>console.log(response))
-
-
-}, [])
-
-
-
-
+import axios from 'axios'
 
 function App() {
+  useEffect(() => {
+    axios.get(`http://localhost:4000/api/allcities`)
+    .then(response =>console.log(response.data.response.cities))
+  }, [])
+
   return (
     <BrowserRouter>
       <Header />

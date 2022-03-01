@@ -1,4 +1,4 @@
-const Router = require('express').Router
+const Router = require('express').Router()
 
 const citiesController = require('../controllers/citiesControllers')
 const {obtainCities} = citiesController

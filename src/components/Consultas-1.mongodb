@@ -1,6 +1,6 @@
 // MongoDB Playground
 const database = "myTinerary";
-const collection = "ciudades";
+const collection = "cities";
 
 use(database);
 

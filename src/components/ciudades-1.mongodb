@@ -3,10 +3,10 @@ const database = "myTinerary";
 
 use(database);
 
-db.ciudades.drop();
+db.cities.drop();
 
 
-db.ciudades.insertMany([
+db.cities.insertMany([
 
   {
         
