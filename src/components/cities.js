@@ -1,5 +1,5 @@
 import React from "react";
-/* import '../../styles/Cities.css' */
+import '../styles/stylesCities.css'
 import Cards from './cards'
 const Cities = ()=>{
     return(

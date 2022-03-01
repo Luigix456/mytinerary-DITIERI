@@ -1,19 +1,24 @@
 import React from "react";
-import ciudades from './datos.js'
-function Card() {
+import datos from './datos.js'
+function Card({city}) {
     return(
         <div>
-            {ciudades.map(ciudades=>
-            <div className="card" style={{width: 25 + 'rem'}}>
-                <img src={process.env.PUBLIC_URL + `/assets/${ciudades.image}`} className="card-img-top" alt="barcelona"></img>
-                <div className="card-body">
-                    <h3>{ciudades.name}</h3>
-                    <p className="card-text">{ciudades.description}</p>
-                </div>
+            {/* {datos.map(ciudades=> */}
+            <div class="card">
+            <div class="card-header">
+              <img src={process.env.PUBLIC_URL + `/assets/${city.image}`} alt="rover" />
             </div>
-        )
-        }
+            <div class="card-body">
+              <span class="tag tag-teal">{city.continent}</span>
+              <h4>
+              {city.name}
+              </h4>
+              <p>
+              {city.description}
+              </p>
+            </div>
+          </div>
         </div>
-    )
+        )
 }
 export default Card

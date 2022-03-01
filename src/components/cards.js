@@ -9,17 +9,16 @@ function Cards() {
   return (
     <div className='container d-flex justify-content-center h-100'>
       <div className='col'>
-        <input type="text" placeholder="Search..." value={filter} onChange={(event)=>setFilter(event.target.value)}/>
         </div>
-        <div className='row'>
+        <div className='row cards'>
            {
-           dataSearch.map(card=> (
-                <div className='col-md-4' key={card.id}>
-                    <Card
-                    />
-                </div>
+             dataSearch.map(card=> (
+               <>
+                    <Card city={card} key={card.name} />
+                </>
            ))
-           }
+          }
+          <input type="text" placeholder="Search..." value={filter} onChange={(event)=>setFilter(event.target.value)}/>
         </div>
     </div>
   )
