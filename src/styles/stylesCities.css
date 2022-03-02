@@ -158,3 +158,37 @@ input {
   padding: .5em;
   border-radius: 1em;
 }
+
+@media only screen and (min-width:360px) {
+  input {
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: .5em;
+    border-radius: 1em;
+  }
+  .search-title p{
+    width: 100%;
+  }
+} 
+
+@media only screen and (max-width:760px) {
+  .tag-teal {
+    margin: auto;
+    margin-bottom:2em;
+    background-color: #47bcd4;
+    font-size: 1.2em;
+    padding: .5em 1em;
+    font-weight: bold;
+  }
+  
+} 
+@media only screen and (min-width:760px) {
+  input {
+      align-self: center;
+      background-color: rgb(255, 255, 255);
+      width: 40%;
+      padding: .5em;
+      border-radius: 1em;
+    }
+} 

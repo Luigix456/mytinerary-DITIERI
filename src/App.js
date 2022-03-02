@@ -6,6 +6,7 @@ import Home from './components/home'
 import Cities from './components/cities'
 import "./style.css";
 import axios from 'axios'
+import Details from './components/details'
 
 function App() {
   useEffect(() => async() => {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/> 
         <Route path="/cities" element={<Cities/>}/>
+        <Route path="/details" element={<Details/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

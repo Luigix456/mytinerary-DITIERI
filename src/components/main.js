@@ -8,7 +8,7 @@ function Main() {
             <div className="container col-xxl-8 px-4 py-5">
                 <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div className="col-10 col-sm-8 col-lg-6">
-                    <img src={process.env.PUBLIC_URL + `/assets/group-of-people-traveling-concept-PBNCKWD.jpg`} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{borderRadius: 4 + "rem"}}></img>
+                    <img src={process.env.PUBLIC_URL + `/assets/group-of-people-traveling-concept-PBNCKWD.jpg`} className="d-block mx-lg-auto img-fluid main-img" alt="Bootstrap Themes" width="700" height="500" loading="lazy" style={{borderRadius: 4 + "rem"}}></img>
                 </div>
                 <div className="col-lg-6 title-container">
                     <h1 className="display-5 fw-bold lh-1 mb-3">My<span style={{color:"red"}}>Tinerary</span></h1>
