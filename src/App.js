@@ -8,7 +8,7 @@ import "./style.css";
 import axios from 'axios'
 
 function App() {
-  useEffect(() => {
+  useEffect(() => async() => {
     axios.get(`http://localhost:4000/api/allcities`)
     .then(response =>console.log(response.data.response.cities))
   }, [])

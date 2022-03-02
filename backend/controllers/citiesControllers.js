@@ -1,11 +1,11 @@
-const cities = require('../models/cities')
+const Cities = require('../models/cities')
 
 const citiesController = {
     obtainCities: async (req, res)=> {
         let cities
         let error = null
         try {
-            cities = await cities.find()
+            cities = await Cities.find()
         }catch(err){
             error = err
             console.log(error)
