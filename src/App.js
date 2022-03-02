@@ -7,6 +7,7 @@ import Cities from './components/cities'
 import "./style.css";
 import axios from 'axios'
 import Details from './components/details'
+import ScrollTop from './components/scrollToTop' 
 
 function App() {
   useEffect(() => async() => {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cities" element={<Cities/>}/>
         <Route path="/details" element={<Details/>}/>
       </Routes>
+      <ScrollTop/>
       <Footer/>
     </BrowserRouter>
   );
