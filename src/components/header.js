@@ -8,7 +8,7 @@ function header() {
             <header className="p-3 mb-3 border-bottom">
                 <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
                     <div className="container-fluid">
-                        <img className="logo" src={process.env.PUBLIC_URL + `pngwing.com.png`}></img>
+                        <img className="logo" src={process.env.PUBLIC_URL + `pngwing.png`}></img>
                         <a className="navbar-brand" href="#">MyTinerary</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

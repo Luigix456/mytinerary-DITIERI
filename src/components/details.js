@@ -1,13 +1,37 @@
-import React from "react";
-import {Link as LinkRouter} from "react-router-dom"
-const Details = ()=>{
-    return(
-        <>
-        
-        <LinkRouter to="/cities" className='link'>
-            <button type="button" className="btn btn-outline-danger btn-lg px-4 button-details" style={{fontWeight: 'bolder'}} >¡Return to Cities!</button>
-        </LinkRouter>
-        </>
-    )
-}
-export default Details;
+import React,{useEffect} from "react";
+import { useParams } from "react-router-dom";
+import { connect } from "react-redux";
+import citiesActions from "../redux/actions/citiesActions";
+import itinerariesActions from "../redux/actions/itinerariesActions";
+import { Link as LinkRouter } from "react-router-dom";
+import DetailsItinerary from "./detailsCard";
+import "../styles/stylesItineraries.css"
+const Cards = (props) => {
+  const { cities, itineraries } = props;
+
+  const { id } = useParams();
+  console.log(id);
+  useEffect(() => {
+    props.perCity(id);
+    props.itinerariesPorCiudad(id);
+  }, []);
+  console.log(props);
+  return (
+      <>{itineraries.length > 0 ? itineraries.map(itinerario => {
+          return <DetailsItinerary itinerary={itinerario}/>
+      })
+    : <h1>There is no itineraries in this page at the moment, please comeback soon!</h1>}
+      </>
+  )};
+const mapStateToProps = (state) => {
+  return {
+    cities: state.Data.cities,
+    filterCities: state.Data.filterCities,
+    itineraries: state.itinerariesReducer.itineraries,
+  };
+};
+const mapDispatchToProps = {
+  perCity: citiesActions.perCity,
+  itinerariesPorCiudad: itinerariesActions.itinerariesPorCiudad,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

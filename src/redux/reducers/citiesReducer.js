@@ -1,6 +1,8 @@
 const initialState = {
-    city: [],
-    aux: []
+    city: {},
+    cities: [],
+    aux: [],
+    filterCities: [],
 }
 
 const citiesReducer = (state = initialState, action) => {
@@ -8,8 +10,9 @@ const citiesReducer = (state = initialState, action) => {
         case 'fetch':
             return {
                 ...state,
-                city: action.payload,
-                aux: action.payload
+                cities: action.payload,
+                aux: action.payload,
+                filterCities: action.payload
             }
             case 'deleteCity':
                 return {
@@ -25,7 +28,8 @@ const citiesReducer = (state = initialState, action) => {
                     aux: [...city]
                 }
                 case 'filtro':
-                    const filtrado = action.payload.cities.filter((city => city.name.toLowerCase().startsWith(action.payload.value.toLowerCase().trim())))
+                    const { citiesArray, value } = action.payload
+                    const filtrado = citiesArray.filter((city => city.name.toLowerCase().startsWith(value.toLowerCase().trim())))
         
                     return {
                         ...state,

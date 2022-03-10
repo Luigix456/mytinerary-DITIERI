@@ -1,6 +1,7 @@
 import React from "react";
 import {Link as LinkRouter} from "react-router-dom"
 function Card(props) {
+  console.log(props)
     return(
         <div>
             {/* {datos.map(ciudades=> */}
@@ -17,7 +18,7 @@ function Card(props) {
               {props.description}
               </p>
             </div>
-            <LinkRouter to="/details" className='link'>
+            <LinkRouter to={`/details/${props.id}`} className='link'>
               <div className="cont-det"><a className="details">Details</a></div>
             </LinkRouter>
           </div>
