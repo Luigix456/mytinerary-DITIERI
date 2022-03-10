@@ -18,9 +18,9 @@ const citiesController = {
     },
     loadCity: async(req,res)=>{         /* Controlador para cargar una nueva ciudad desde el front. */
         console.log(req.body)
-        const {name, country, descripcion} = req.body.dataInput
-        new Ciudades({name:ciudad, 
-                     country:pais,
+        const {name, continent, descripcion} = req.body.dataInput
+        new Ciudades({name:name, 
+                     continent:continent,
                      descripcion: descripcion}).save()   /* salva  */
             .then((respuesta) => res.json({respuesta}))
     },
@@ -39,8 +39,15 @@ const citiesController = {
         let ciudadb = await Ciudades.findOneAndUpdate({_id:id}, ciudad)
          console.log(ciudadb)
 
-    }
+    },
+    consultarCiudadePorID: async (require, response) => {
+        const id = require.params.id
+        var ciudades
 
+        ciudades = await Cities.findOne({ _id: id })
+            .then((res) => response.json({ paso: "listo", respuesta: res }))
+            .catch(error => response.json({ error }))
+    }
 
 }
 module.exports = citiesController

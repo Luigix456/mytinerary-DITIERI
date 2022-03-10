@@ -17,6 +17,13 @@ db.cities.insertMany([
       },
       {
         
+        "image":"milan.jpg",
+        "name": "Milan",
+        "description": "Milan is the capital city of the region of Lombardy in northern Italy. It is the second largest city by population in Italy, behind Rome. It is Italy's leading financial centre and its most prosperous manufacturing and commercial city",
+        "continent": "Europe"
+      },
+      {
+        
         "image":"estambul.jpg",
         "name": "Istanbul",
         "description": "Istanbul, a fascinating city built on two Continents, divided by the Bosphorus Strait. This is one of the greatest cities in the world where you can see a modern western city combined with a traditional eastern city, it's a melting pot of many civilizations and different people.",
@@ -34,13 +41,6 @@ db.cities.insertMany([
         "image":"moscu.jpg",
         "name": "Moscow",
         "description": "Moscow is the capital city and the most populous federal subject of Russia. The city is a major political, economic, cultural and scientific center in Russia and in Eastern Europe. According to Forbes 2013, Moscow has been ranked as the ninth most expensive city in the world by Mercer and is one of the world's largest urban economies",
-        "continent": "Europe"
-      },
-      {
-        
-        "image":"milan.jpg",
-        "name": "Milan",
-        "description": "Milan is the capital city of the region of Lombardy in northern Italy. It is the second largest city by population in Italy, behind Rome. It is Italy's leading financial centre and its most prosperous manufacturing and commercial city",
         "continent": "Europe"
       },
       {

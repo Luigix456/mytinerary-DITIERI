@@ -3,13 +3,17 @@ import Card from './citiesCards'
 /* import data from '../../card.json' */
 import { useState, useEffect } from 'react'
 import axios from 'axios'
- function Cards() {
+import citiesActions from '../redux/actions/citiesActions'
+import {connect} from 'react-redux';
+
+
+ function Cards(props) {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [ciudades, setCiudades] = useState([])
  /*  const [city, setCity] = useState(); */
- useEffect(() => {
+ /* useEffect(() => {
   const loadPosts = async () => {
     setLoading(true);
     const response = await axios.get(
@@ -18,12 +22,15 @@ import axios from 'axios'
     setCiudades(response.data.response.cities)
     setPosts(response.data.response.cities)
     setLoading(false);
+
+
+
   }
 
   loadPosts()
-}, [])
+}, []) */
 
- const searching = (search) => {
+ /* const searching = (search) => {
   setSearchTitle(search.target.value);
   filtro(search.target.value);
 }
@@ -39,12 +46,15 @@ const filtro = function (resultado) {
       return card
     } return(console.log("filtro"))
   })
-  setCiudades(resultadoFiltro)
-}
-  console.log(searchTitle)
-  return (
-    <>
-    <div className='searchfilter'>
+  setCiudades(resultadoFiltro) */
+  useEffect(() => {
+    props.fetchCities()
+  }, []);
+  console.log(props)
+     
+  return <h1>Cities</h1>
+    {/* <>
+      <div className='searchfilter'>
       <br></br>
       <div className='search-title'>
         <p>¡Find your favorite place!</p>
@@ -74,52 +84,22 @@ const filtro = function (resultado) {
         )}
       </div>
     </div>
-    </>
-      )
-  }
-export default Cards
-
-
-/* import React from 'react'
-import Card from './citiesCards'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
-function Cards() {
-  const [filter, setFilter] = useState('');
-  const [ciudades, setCiudades] = useState([]);
-
-  useEffect (() => {
-    const loadDate = async () =>{
-      const respuesta = await axios.get("http://localhost:4000/api/allcities")
-      setCiudades(respuesta.data.response.ciudades)
-      console.log(ciudades)
-    }
-    
-    loadDate();
-  },[])
-  
-  return (
-    <div className='cities'>
-      <input className="inp-search" type="text" placeholder="Search..." value={filter} onChange={(event)=>setFilter(event.target.value)}/>
-      <div className='container d-flex justify-content-center h-100'>
-        <div className='row cards'>
-           {{
-             ciudades.length!== 0? (
-               ciudades.map((city) => (
-               <Card
-                  image = {city.image}
-                  continent = {city}
-                  name = {city.name}
-                  description = {city.description}
-               />
-             )))
-             : (<h2>------Not Found  -----</h2>)
-                }}
-        </div>
-    </div>
-    </div>
-    
-  )
+    </> */}
+      
 }
+  /* console.log(searchTitle) */
+  /* const mapStateToProps = (state) => {
 
-export default Cards */
+    return{
+        cities: state.Data.cities,
+        filterCities: state.Data.filterCities,
+
+        
+    }
+    }
+const mapDispatchToProps = {
+ fetchCities: citiesActions.fetchCities,
+ filterCity : citiesActions.filterCity
+}     
+ */
+export default /* connect(mapStateToProps,mapDispatchToProps) */(Cards)
