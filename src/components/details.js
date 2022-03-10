@@ -20,7 +20,7 @@ const Cards = (props) => {
       <>{itineraries.length > 0 ? itineraries.map(itinerario => {
           return <DetailsItinerary itinerary={itinerario}/>
       })
-    : <h1>There is no itineraries in this page at the moment, please comeback soon!</h1>}
+    : <div><br></br><h1>There is no itineraries in this page at the moment, please comeback soon!</h1></div>}
       </>
   )};
 const mapStateToProps = (state) => {
