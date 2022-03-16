@@ -34,11 +34,12 @@ function header() {
                                     <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img>
                                 </a>
                                 <ul className="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                                    <li><a className="dropdown-item" href="#">New trip...</a></li>
-                                    <li><a className="dropdown-item" href="#">Settings</a></li>
-                                    <li><a className="dropdown-item" href="#">Profile</a></li>
-                                    <li><hr className="dropdown-divider"></hr></li>
-                                    <li><a className="dropdown-item" href="#">Sign Out</a></li>
+                                    <LinkRouter to="/signUp">
+                                        <li><a className="dropdown-item" href="#">Sign Up</a></li>
+                                    </LinkRouter>
+                                    <LinkRouter to="/signIn">
+                                        <li><a className="dropdown-item" href="#">Sign In</a></li>
+                                    </LinkRouter>
                                 </ul>
                             </div>
                         </div>

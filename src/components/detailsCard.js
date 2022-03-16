@@ -21,6 +21,9 @@ const DetailsItinerary = ({itinerary}) => {
               <div>
                 <p>{itinerary.hashtags}</p>
                 <p>Price: {"💸".repeat(parseInt(itinerary.price))}</p>
+                <p>{itinerary.hashtags}</p>
+                <p>Duration: {itinerary.hours} Hours</p>
+                <p>Likes: {itinerary.likes}</p>
               </div>
               <p>
                 <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
