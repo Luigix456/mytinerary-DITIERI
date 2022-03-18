@@ -20,6 +20,10 @@ const validator = (req, res, next) => {
             'string.min':'The password must contain at least 8 characters, an uppercase letter, a lowercase letter and a number',
             'string.pattern':"The password must be alphanumeric and it must contain at least 1 number"
         }),
+
+        picture:joi.string().required(),
+
+        country:joi.string().required(),
         
         from:joi.string()
     })

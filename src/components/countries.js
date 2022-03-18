@@ -1,4 +1,4 @@
-const countries =[
+const countriesJS =[
     {
       
         
@@ -72,4 +72,4 @@ const countries =[
   
   ]
 
-  export default countries;
+  export default countriesJS;

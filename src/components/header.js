@@ -2,7 +2,10 @@ import React from "react";
 import {Link as LinkRouter} from "react-router-dom"
 
 
-function header() {
+const header = (props) => {
+    function SignOut() {
+		props.SignOutUser(props.user.email)
+	}
     return(
         <div className="bg-danger">
             <header className="p-3 mb-3 border-bottom">
@@ -29,7 +32,37 @@ function header() {
                                     <a className="nav-link" href="#">About</a>
                                 </li>
                             </ul>
-                            <div className="dropdown text-end">
+                            {/* USUARIO */}
+                            {props.user ? 
+                            <div className="navorder me-3">
+                                <div>
+                                <a target={SignOut} color="inherit">Sign Out</a>
+                                </div>
+                                {props.user ?
+                                <div>Logged as {props.user.name}</div>
+                                :
+                                <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img> }
+                            </div>
+                            : <div className="navorder">
+                            <div>
+                            <LinkRouter to="/signUp" className='link'>
+                            <a>Sign Up</a>
+                            </LinkRouter>
+                            <LinkRouter to="/signIn" className='link'>
+                            <a>Sign In</a>
+                            </LinkRouter>
+                            </div>
+                            <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img>
+                        </div>}
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    )
+}
+export default header
+                            {/* <div className="dropdown text-end">
                                 <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img>
                                 </a>
@@ -41,12 +74,4 @@ function header() {
                                         <li><a className="dropdown-item" href="#">Sign In</a></li>
                                     </LinkRouter>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </div>
-    )
-}
-export default header
+                            </div> */}
