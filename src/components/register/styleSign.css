@@ -1,7 +1,23 @@
+.signup-Conteiner {
+	margin-top:6em;
+}
+
 .panel-heading {
     padding: 5px 15px;
 }
 
+.userProfile {
+	margin-right: 9em;
+}
+
+.dropdownOptions {
+	position: relative;
+}
+
+.articleContainer {
+	display: flex;
+	align-items: center;
+}
 .panel-footer {
 	padding: 1px 15px;
 	color: #A0A0A0;

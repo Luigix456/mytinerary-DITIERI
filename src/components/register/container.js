@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import userActions from '../../redux/actions/userActions';
+import './styleSign.css'
 
 function Container(props) {
 
@@ -16,13 +17,6 @@ function Container(props) {
 				</div>
 			</>
 				: <h1>No user connected</h1>}
-			<div className="card bg-light d-flex flex-column justify-content-center align-items-center mb-5">
-				<article className="card-body mx-auto" style={{ maxWidth: 400 }}>
-					<p className="text-center">Get started with your free account</p>
-						<p className="bg-light text-center">OR</p>
-						<p className="bg-light text-center">SignIn here!</p>
-				</article>
-			</div>
 
 		</>
 	)

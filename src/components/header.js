@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@mui/material/Button';
 import {Link as LinkRouter} from "react-router-dom"
 
 
@@ -36,23 +37,29 @@ const header = (props) => {
                             {props.user ? 
                             <div className="navorder me-3">
                                 <div>
-                                <a target={SignOut} color="inherit">Sign Out</a>
+                                    <Button onClick={SignOut} color="inherit">SignOut</Button>
                                 </div>
                                 {props.user ?
-                                <div>Logged as {props.user.name}</div>
+                                <img className='imageNav' src={props.user.picture} alt={"Logged as " + props.user.name + props.user.surName} />
                                 :
-                                <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img> }
+                                <img className='rounded-circle' src='https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png' alt='logo' width='50' height='50'/>}
+                                
                             </div>
-                            : <div className="navorder">
-                            <div>
-                            <LinkRouter to="/signUp" className='link'>
-                            <a>Sign Up</a>
-                            </LinkRouter>
-                            <LinkRouter to="/signIn" className='link'>
-                            <a>Sign In</a>
-                            </LinkRouter>
+                            : <div className="navorder userProfile">
+                            <div className='dropdown text-end'>
+                            <a href='#' className='d-block link-dark text-decoration-none dropdown-toggle' id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src='https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png' alt="mdo" width="50" height="50" className="rounded-circle"></img>
+                            </a>
+                            <ul className='dropdown-menu text-small dropdownOptions'>
+                                <LinkRouter to="/signUp">
+                                    <li><a className="dropdown-item" href="#">Sign Up</a></li>
+                                </LinkRouter>
+                                <LinkRouter to="/signIn">
+                                    <li><a className="dropdown-item" href="#">Sign In</a></li>
+                                </LinkRouter>
+                            </ul>
+                            
                             </div>
-                            <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img>
                         </div>}
                         </div>
                     </div>

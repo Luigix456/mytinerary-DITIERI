@@ -6,7 +6,7 @@ import Snack from '../../components/snackbar';
 import FacebookSignUp from "./facebooksignup"
 import {useState } from "react";
 import countriesJS from "../countries";
-
+import './styleSign.css'
  function SignUp(props) {
     const countries = [
         "unselected",
@@ -32,18 +32,9 @@ import countriesJS from "../countries";
         console.log(event.target.value);
         setSelectCountries(event.target.value);
       }
-
-        console.log(props)
         
     const handleSubmit = (event) => {
         event.preventDefault()   
-        console.log(event.target.value)
-        console.log(event.target[0].value)
-        console.log(event.target[1].value)
-        console.log(event.target[2].value)
-        console.log(event.target[3].value)
-        console.log(event.target[4].value)
-
         const userData={
             name:event.target[0].value,
             surName:event.target[1].value,
@@ -61,7 +52,7 @@ import countriesJS from "../countries";
     return (
 
       <>
-<div className='d-flex flex-column justify-content-center align-items-center' >
+<div className='d-flex flex-column justify-content-center align-items-center signup-Conteiner' >
     <div>
           <h2 className="mt-3 text-center">Select your country</h2>
         </div>
