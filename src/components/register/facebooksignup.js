@@ -28,7 +28,7 @@ function FacebookSignUp(props) {
   }
 
   return (
-      <div className="mb-5">
+      <div className="mb-5 fb">
          <FacebookLogin
             cssClass="buttonsocial my-facebook-button-class"
             icon="fa-facebook"

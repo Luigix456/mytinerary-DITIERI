@@ -20,7 +20,7 @@ function FacebookSignIn(props) {
   }
 
   return (
-    <div className="mb-3">
+    <div className="mb-3 fb">
       <FacebookLogin
         cssClass="buttonsocial my-facebook-button-class"
         icon="fa-facebook"

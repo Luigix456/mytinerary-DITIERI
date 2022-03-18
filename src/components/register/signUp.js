@@ -54,11 +54,11 @@ import './styleSign.css'
       <>
 <div className='d-flex flex-column justify-content-center align-items-center signup-Conteiner' >
     <div>
-          <h2 className="mt-3 text-center">Select your country</h2>
+          <h2 className="mt-3 text-center titleSignUp countriesButton">Select your country</h2>
         </div>
         <div>
           <select
-            className="form-select form-select-sm"
+            className="form-select form-select-sm selectCountries"
             aria-label=".form-select-sm example"
             onChange={select}
           >
@@ -71,10 +71,10 @@ import './styleSign.css'
         <section>       
 
         <Snack/>
-        <h1 className='mb-5 mt-5'>Create a new User with Facebook</h1>
+        <h1 className='mb-5 mt-5 titlefb'>Create a new User with Facebook</h1>
         <FacebookSignUp country={selectCountries}/>
-        <h2>Or with our Form</h2>
-        <form onSubmit={handleSubmit}>
+        <h2 className='fb fb2'>Or with our Form</h2>
+        <form className='fb2' onSubmit={handleSubmit}>
             <div className="form-group input-group">
                 <div className="input-group-prepend"></div>
                 <input name="Name" className="form-control mb-3" placeholder="Name" type="text" />
@@ -106,22 +106,15 @@ import './styleSign.css'
                 </div>
                    <input name="picture" className="form-control mb-3" placeholder="Upload your Profile image" type="text" />
                 </div>
-            <label>Select Your country</label>
-            <select className="form-select mb-3" aria-label="Default select example">
-               
-            {countriesJS.map(countries =>
-                <option key={countries.name} value={countries.value}>{countries.name}</option>
-                )}
-            </select>
 
             <div className="form-group d-flex justify-content-center align-items-center">
                 <button type="submit" className="btn btn-primary btn-block mt-3"> Create Account  </button>
             </div>
-            <div className="text-center mt-3">Do you have an existing account? <LinkRouter to="/signin">SignIn</LinkRouter> </div>
+            <div className="text-center mt-3 fb2">Do you have an existing account? <LinkRouter to="/signin">SignIn</LinkRouter> </div>
         </form>
         </section>    
         ) : (
-            <h3>Select your country to proceed with the SignUp</h3>
+            <h3 className='titleSignUp2'>Register Form</h3>
           )}
         </div>
         </> 

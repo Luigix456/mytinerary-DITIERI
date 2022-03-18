@@ -41,9 +41,9 @@ console.log(props)
 			</div>
 
 			<div className="form-group d-flex justify-content-center align-items-center">
-				<button type="submit" className="btn btn-primary btn-block mt-5 mb-3 text-center"> SignIn  </button>
+				<button type="submit" className="btn btn-primary btn-block mt-5 mb-3 text-center"> Sign In  </button>
 			</div>
-			<div className="text-center">Don't you have an account? Please <LinkRouter to="/signup">SignUp</LinkRouter> </div>
+			<div className="text-center">Don't you have an account? Please <LinkRouter to="/signup">Sign Up</LinkRouter> </div>
 		</form>
 
 		</div>
