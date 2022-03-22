@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react'
+import { connect } from 'react-redux';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Footer from './components/footer'
 import Header from './components/header'
 import Home from './components/home'
 import Cities from './components/cities'
 import "./style.css";
-import axios from 'axios'
 import Details from './components/details'
 import ScrollTop from './components/scrollToTop' 
 import SignIn from './components/register/signIn'
 import SignUp from './components/register/signUp'
+import userActions from './redux/actions/userActions'
 
-function App() {
-  useEffect(() => async() => {
-    /* axios.get(`http://localhost:4000/api/allcities`)
-    .then(response =>console.log(response.data.response.cities)) */
+function App(props) {
+  useEffect(() => {
+    if(localStorage.getItem('token') !== null){
+      const token = localStorage.getItem('token')
+      props.VerificarToken(token)
+    }
+    // eslint-disable-next-line
   }, [])
-
   return (
     <BrowserRouter>
       <ScrollTop/>
@@ -32,4 +35,9 @@ function App() {
     </BrowserRouter>
   );
 }
-export default App
+const mapDispatchToProps = {
+  VerificarToken: userActions.VerificarToken,
+}
+
+export default connect(null, mapDispatchToProps)(App);
+

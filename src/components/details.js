@@ -6,6 +6,8 @@ import itinerariesActions from "../redux/actions/itinerariesActions";
 import { Link as LinkRouter } from "react-router-dom";
 import DetailsItinerary from "./detailsCard";
 import "../styles/stylesItineraries.css"
+
+
 const Cards = (props) => {
   const { cities, itineraries } = props;
 

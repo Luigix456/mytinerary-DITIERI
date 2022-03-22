@@ -1,6 +1,9 @@
 import React from "react";
 import Button from '@mui/material/Button';
 import {Link as LinkRouter} from "react-router-dom"
+import { sizeHeight } from "@mui/system";
+import { connect } from 'react-redux';
+import userActions from '../redux/actions/userActions';
 
 
 const header = (props) => {
@@ -33,34 +36,34 @@ const header = (props) => {
                                     <a className="nav-link" href="#">About</a>
                                 </li>
                             </ul>
+
                             {/* USUARIO */}
-                            {props.user ? 
-                            <div className="navorder me-3">
-                                <div>
-                                    <Button onClick={SignOut} color="inherit">SignOut</Button>
-                                </div>
-                                {props.user ?
-                                <img className='imageNav' src={props.user.picture} alt={"Logged as " + props.user.name + props.user.surName} />
-                                :
-                                <img className='rounded-circle' src='https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png' alt='logo' width='50' height='50'/>}
-                                
-                            </div>
-                            : <div className="navorder userProfile">
+
+                            <div className="navorder userProfile">
                             <div className='dropdown text-end'>
+                            {props.user === null ?
                             <a href='#' className='d-block link-dark text-decoration-none dropdown-toggle' id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src='https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png' alt="mdo" width="50" height="50" className="rounded-circle"></img>
-                            </a>
+                            </a> :
+                            <a href='#' className='d-block link-dark text-decoration-none dropdown-toggle' id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src={props.user.picture} alt="fotoPerfil" width="50" height="50" className="rounded-circle"></img>
+                            </a>}
                             <ul className='dropdown-menu text-small dropdownOptions'>
-                                <LinkRouter to="/signUp">
-                                    <li><a className="dropdown-item" href="#">Sign Up</a></li>
-                                </LinkRouter>
-                                <LinkRouter to="/signIn">
-                                    <li><a className="dropdown-item" href="#">Sign In</a></li>
-                                </LinkRouter>
+                                {props.user === null ? 
+                                <>
+                                    <LinkRouter to="/signUp">
+                                        <li><a className="dropdown-item" href="#">Sign Up</a></li>
+                                    </LinkRouter>
+                                    <LinkRouter to="/signIn">
+                                        <li><a className="dropdown-item" href="#">Sign in</a></li>
+                                    </LinkRouter>
+                                    </>
+                                : 
+                                    <><li><a onClick={SignOut} className="dropdown-item" href="#">Sign Out</a></li></>
+                            }
                             </ul>
-                            
                             </div>
-                        </div>}
+                        </div>
                         </div>
                     </div>
                 </nav>
@@ -68,17 +71,14 @@ const header = (props) => {
         </div>
     )
 }
-export default header
-                            {/* <div className="dropdown text-end">
-                                <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="https://w7.pngwing.com/pngs/11/510/png-transparent-computer-icons-colorado-state-university-user-profile-miscellaneous-service-logo.png" alt="mdo" width="50" height="50" className="rounded-circle"></img>
-                                </a>
-                                <ul className="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                                    <LinkRouter to="/signUp">
-                                        <li><a className="dropdown-item" href="#">Sign Up</a></li>
-                                    </LinkRouter>
-                                    <LinkRouter to="/signIn">
-                                        <li><a className="dropdown-item" href="#">Sign In</a></li>
-                                    </LinkRouter>
-                                </ul>
-                            </div> */}
+const mapStateToProps = (state) => {
+	return {
+		user: state.userReducer.user,
+	}
+}
+const mapDispatchToProps = {
+	SignOutUser: userActions.SignOutUser,
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(header)

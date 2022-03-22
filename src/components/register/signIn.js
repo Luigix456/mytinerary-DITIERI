@@ -3,7 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import userActions from '../../redux/actions/userActions';
 import { Link as LinkRouter } from 'react-router-dom';
-import Container from './container';
+/* import Container from './container'; */
 import Snack from '../../components/snackbar';
 import FacebookSignIn from "./facebooksignin"
 
@@ -23,9 +23,9 @@ console.log(props)
 	<div className='d-flex flex-column justify-content-center align-items-center signup-Conteiner' >
 		
 		<Snack/>
-		<Container/>
+		<h4 className='mb-3'>Login with Facebook</h4>
 		<FacebookSignIn/>
-		<h4 className='mb-3'>Or SignIn using our form</h4>
+		<h4 className='mb-3'>OR</h4>
 		<form onSubmit={handleSubmit}>
 			<div className="form-group input-group">
 				<div className="input-group-prepend">
