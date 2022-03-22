@@ -104,7 +104,7 @@ import './styleSign.css'
                 <div className="input-group-prepend">
                     
                 </div>
-                   <input name="picture" className="form-control mb-3" placeholder="Upload your Profile image" type="text" />
+                   <input name="picture" className="form-control mb-3" placeholder="Upload your Profile image with an URL" type="text" />
                 </div>
 
             <div className="form-group d-flex justify-content-center align-items-center">
