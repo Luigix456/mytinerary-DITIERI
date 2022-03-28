@@ -9,7 +9,7 @@ const userSchema =  new mongoose.Schema({
     emailVerificado:{type:Boolean, required:true}, 
     picture:{type:String,required:true},
     country:{type:String,required:true},
-
+    autor: {type:mongoose.Types.ObjectId, ref:"users"},
     from:{type:Array}
     
 })
