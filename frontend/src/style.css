@@ -1,0 +1,136 @@
+* {
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.cont-footer {
+  margin-top: 2em;
+}
+.title-img-carousel {
+  padding: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color:rgba(255, 255, 255, 0.849);
+  background-color: rgba(177, 41, 41, 0.226);
+  /* transition: all 1s ease-in; */
+}
+
+.carousel-img {
+  width: 100% !important;
+  height: 250px !important;
+}
+.logo {
+  width: 50px;
+  height:50px;
+  margin-right: 2rem;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/assets/backgroundImage.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.button-details {
+  position: absolute;
+  left: 45%;
+  top: 60%;
+  animation: button-main;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: .1s;
+}
+
+.title-container {
+  background: rgba(255, 255, 255, 0.849);
+  padding: 2rem;
+  border-radius: 2em;
+}
+.inp-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  width: 20%;
+}
+.title-container div button {
+  /* background: rgba(255, 255, 255, 0.459); */
+  border-radius: 2em;
+  animation-name: button-main;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-delay: .1s;
+}
+@keyframes button-main {
+  from {
+    background: rgb(241, 170, 170);
+    color: white;
+  }
+  to {
+    background: rgb(187, 27, 27);
+    color: white;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.advice {
+  width: 100%;
+  height: 100vh;
+}
+@media only screen and (min-width:360px) {
+  .search-title p{
+    width: 100%;
+  }
+} 

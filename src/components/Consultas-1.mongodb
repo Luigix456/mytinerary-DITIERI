@@ -1,7 +1,0 @@
-// MongoDB Playground
-const database = "myTinerary";
-const collection = "cities";
-
-use(database);
-
-db.getCollection(collection).find({name : "Milan"})

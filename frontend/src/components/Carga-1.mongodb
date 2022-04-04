@@ -1,0 +1,24 @@
+// MongoDB Playground
+const database = "myTinerary";
+
+
+//DATOS A CARGAR
+const _name = "Milan";
+const _continent = "Europe";
+
+const okName = _name.charAt(0).toUpperCase() + _name.slice(1).toLowerCase()
+const okContinent = _continent
+
+//LLAMAR BASE DE DATOS
+use(database);
+
+db.cities.findAndModify({query: {name:okName},
+update:{$set:{name:okName,
+              pais:okContinent,
+              }},
+              upsert:true} //ES UNA MEZLCA ENTRE UPDATE E INSERT, es decir,
+                           //si no encuentra el elemento que establecimos en la query,
+                           //lo actualiza, si no lo encuentra, lo inserta, por defecto
+                           //upsert es false si no lo aclaramos
+              
+)

@@ -1,0 +1,69 @@
+// MongoDB Playground
+const database = "myTinerary";
+
+use(database);
+
+db.itineraries.drop();
+
+
+db.itineraries.insertMany([
+
+  {
+        
+        "name": "Camp Nou",
+        "image":"https://www.fcbarcelona.com/photo-resources/2021/08/09/276ad270-e5c6-453d-8d9f-212417ad7cb3/Camp-Nou-3.jpg?width=1200&height=750",
+        "description": "is a football stadium in Barcelona, Spain. It opened in 1957 and has been the home stadium of FC Barcelona since its completion.",
+        "imageUser": "https://i.pinimg.com/originals/17/dd/d3/17ddd332e7b9e3807cc79757e28be6e1.png",
+        "userName": "Sergio Ramos",
+        "price": 10,
+        "hours": 2,
+        "likes": 4,
+        "hashtags": ["#messi", "#football", "#stadium"],
+        "comments": [],
+        "activities": [],
+        "cityId": []
+      },
+      {
+        "name": "Holy Family",
+        "image":"https://static.dw.com/image/59930827_303.jpg",
+        "description": "The architectural work of Gaudí is remarkable for its range of forms, textures, and polychromy and for the free, expressive way in which these elements of his art seem to be composed.",
+        "imageUser": "https://img.uefa.com/imgml/TP/players/1/2014/324x324/35018.jpg?imwidth=36",
+        "userName": "Xavi Hernandez",
+        "price": 5,
+        "hours": 3,
+        "likes": 8,
+        "hashtags": ["#church", "#catholic", "#beautifulBuildings"],
+        "comments": [],
+        "activities": [],
+        "cityId":[]
+      },
+      {
+        "name": "Ambrosian Library",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/9/92/Biblioteca_Ambrosiana_2010.jpg",
+        "description": "The museum is located in the Palazzo dell Ambrosiana, where the Biblioteca Ambrosiana, a historic library in Milan, is housed",
+        "imageUser": "http://2.bp.blogspot.com/_edLMjVpRG-k/SniXwcNCwOI/AAAAAAAAFWw/F-ShTJOnyiQ/s320/1.jpg",
+        "userName": "Paolo Maldini",
+        "price": 2,
+        "hours": 3,
+        "likes": 12,
+        "hashtags": ["#library", "#harryPotter", "#readingTime"],
+        "comments": [],
+        "activities": [],
+        "cityId": []
+      },
+      {
+        
+        "name": "San Siro Stadium",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/a/ae/San_Siro_2014.jpg",
+        "description": "is a football stadium in the San Siro district of Milan, Italy, which is the home of Internazionale and A.C. Milan",
+        "imageUser": "https://odsc.es/wp-content/uploads/2020/03/andrea-pirlo.png",
+        "userName": "Andrea Pirlo",
+        "price": 12,
+        "hours": 2,
+        "likes": 6,
+        "hashtags": ["#internazionaleMilano", "#milanDerby", "#goRossoneris!"],
+        "comments": ["adawddwad"],
+        "activities": ["ceacecdawwa"],
+        "cityId": []
+      }
+])
